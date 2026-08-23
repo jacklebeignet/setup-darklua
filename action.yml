@@ -1,5 +1,9 @@
 name: 'Setup darklua'
 description: 'Set up your GitHub Actions workflow with a specific version of darklua'
+branding:
+  icon: "package"
+  color: "purple"
+
 inputs:
   version:
     description: 'What version to use for darklua?'
