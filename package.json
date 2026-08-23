@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "esbuild src/index.js --bundle --minify --platform=node --format=esm --outfile=dist/index.mjs",
+    "build": "esbuild src/index.js --bundle --minify --platform=node --format=esm --outfile=dist/index.mjs --banner:js=\"import { createRequire } from 'module'; const require = createRequire(import.meta.url);\"",
     "format": "prettier . --write"
   },
   "keywords": [],
