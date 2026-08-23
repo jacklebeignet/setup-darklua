@@ -22,9 +22,9 @@ jobs:
         with:
           node-version: 24
 
-      - run: npm ci
+      - run: pnpm ci
 
-      - run: npm run build
+      - run: pnpm run build
 
       - name: Commit dist if changed
         run: |
