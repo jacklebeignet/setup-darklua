@@ -1,0 +1,32 @@
+{
+  "name": "setup-darklua",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --platform=node --format=esm --outfile=dist/index.mjs",
+    "format": "prettier . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.13.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.9.0",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/http-client": "^4.0.1",
+    "@actions/tool-cache": "^4.0.0"
+  }
+}
