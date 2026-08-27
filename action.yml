@@ -1,17 +1,17 @@
-name: 'Setup darklua'
-description: 'Set up your GitHub Actions workflow with a specific version of darklua'
+name: "Setup darklua"
+description: "Set up your GitHub Actions workflow with a specific version of darklua"
 branding:
   icon: "package"
   color: "purple"
 
 inputs:
   version:
-    description: 'What version to use for darklua?'
+    description: "What version to use for darklua?"
     required: false
-    default: 'latest'
+    default: "latest"
 outputs:
   version:
-    description: 'The exact darklua version that was installed'
+    description: "The exact darklua version that was installed"
 runs:
   using: node24
   main: dist/index.mjs

@@ -14,14 +14,14 @@ A GitHub Action that downloads and installs [darklua](https://github.com/seaofvo
 
 ## Inputs
 
-| Name      | Description                          | Required | Default  |
-|-----------|---------------------------------------|----------|----------|
-| `version` | Which darklua version to install. Accepts a tag like `v0.19.0` or a bare version like `0.19.0`. | No | `latest` |
+| Name      | Description                                                                                     | Required | Default  |
+| --------- | ----------------------------------------------------------------------------------------------- | -------- | -------- |
+| `version` | Which darklua version to install. Accepts a tag like `v0.19.0` or a bare version like `0.19.0`. | No       | `latest` |
 
 ## Outputs
 
-| Name      | Description                                  |
-|-----------|-----------------------------------------------|
+| Name      | Description                                   |
+| --------- | --------------------------------------------- |
 | `version` | The exact darklua version that was installed. |
 
 ## How it works
