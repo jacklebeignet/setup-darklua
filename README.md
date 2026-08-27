@@ -8,6 +8,7 @@ A GitHub Action that downloads and installs [darklua](https://github.com/seaofvo
 - uses: jacklebeignet/setup-darklua@v1
   with:
     version: latest
+    cache: true
 
 - run: darklua --version
 ```
@@ -17,6 +18,7 @@ A GitHub Action that downloads and installs [darklua](https://github.com/seaofvo
 | Name      | Description                                                                                     | Required | Default  |
 | --------- | ----------------------------------------------------------------------------------------------- | -------- | -------- |
 | `version` | Which darklua version to install. Accepts a tag like `v0.19.0` or a bare version like `0.19.0`. | No       | `latest` |
+| `cache`   | Whether to cache the downloaded darklua binary between runs. Set to `false` to disable caching.  | No       | `true`   |
 
 ## Outputs
 

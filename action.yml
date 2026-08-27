@@ -9,6 +9,10 @@ inputs:
     description: "What version to use for darklua?"
     required: false
     default: "latest"
+  cache:
+    description: "Whether to cache the downloaded darklua binary between runs"
+    required: false
+    default: "true"
 outputs:
   version:
     description: "The exact darklua version that was installed"

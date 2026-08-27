@@ -49,6 +49,7 @@ function resolvePlatform() {
 async function run() {
   try {
     const requestedVersion = core.getInput("version") || "latest";
+    const useCache = core.getInput("cache") !== "false";
 
     const version = await resolveVersion(requestedVersion);
     core.info(`Using darklua version ${version}`);
@@ -57,7 +58,11 @@ async function run() {
     // tool-cache keys are conventionally bare version numbers (no leading "v")
     const cacheVersion = version.replace(/^v/, "");
 
-    let installDir = tc.find(TOOL_NAME, cacheVersion, arch);
+    let installDir;
+
+    if (useCache) {
+      installDir = tc.find(TOOL_NAME, cacheVersion, arch);
+    }
 
     if (installDir) {
       core.info(`Found cached darklua ${version} at ${installDir}`);
@@ -79,12 +84,16 @@ async function run() {
       core.info(`Extracting ${fileName}`);
       const extractedDir = await tc.extractZip(downloadPath);
 
-      installDir = await tc.cacheDir(
-        extractedDir,
-        TOOL_NAME,
-        cacheVersion,
-        arch,
-      );
+      if (useCache) {
+        installDir = await tc.cacheDir(
+          extractedDir,
+          TOOL_NAME,
+          cacheVersion,
+          arch,
+        );
+      } else {
+        installDir = extractedDir;
+      }
     }
 
     if (platform !== "windows") {
