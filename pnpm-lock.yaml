@@ -272,19 +272,19 @@ importers:
         version: 4.0.0
     devDependencies:
       '@eslint/js':
-        specifier: ^10.0.1
+        specifier: 10.0.1
         version: 10.0.1(eslint@10.9.1)
       esbuild:
-        specifier: ^0.28.2
+        specifier: 0.28.2
         version: 0.28.2
       eslint:
-        specifier: ^10.9.0
+        specifier: 10.9.1
         version: 10.9.1
       globals:
-        specifier: ^17.11.0
+        specifier: 17.11.0
         version: 17.11.0
       prettier:
-        specifier: ^3.9.6
+        specifier: 3.9.6
         version: 3.9.6
 
 packages:
