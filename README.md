@@ -41,13 +41,13 @@ Supported combinations are whatever darklua publishes release assets for. As of 
 Install dependencies:
 
 ```
-npm install
+pnpm install
 ```
 
 Build:
 
 ```
-npm run build
+pnpm run build
 ```
 
 ## License
