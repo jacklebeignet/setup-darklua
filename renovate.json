@@ -3,5 +3,9 @@
   "extends": [
     "config:best-practices",
     ":semanticCommits"
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
 }
