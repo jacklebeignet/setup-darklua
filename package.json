@@ -22,7 +22,7 @@
     "esbuild": "0.28.2",
     "eslint": "10.10.0",
     "globals": "17.12.0",
-    "prettier": "3.9.7"
+    "prettier": "3.9.9"
   },
   "dependencies": {
     "@actions/core": "^3.0.1",
