@@ -21,7 +21,7 @@ jobs:
       - uses: pnpm/setup@fa36a5ef7dcdefc3a7cb25655c122e00cf6e636e # v3
         with:
           version: 12
-          runtime: node@24
+          runtime: node@26
           install: true
 
       - run: pnpm run build
