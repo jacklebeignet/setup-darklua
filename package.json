@@ -7,8 +7,8 @@
     "format": "prettier . --write"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jack Le Beignet",
+  "license": "MIT",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
